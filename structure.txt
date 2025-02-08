@@ -1,0 +1,94 @@
+ecommerce-backend/
+├── .env                        # Environment variables
+├── .env.example               # Example environment variables
+├── .gitignore                 # Git ignore file
+├── package.json               # Project dependencies
+├── tsconfig.json              # TypeScript configuration
+├── jest.config.js             # Jest configuration
+├── README.md                  # Project documentation
+│
+├── prisma/                    # Prisma ORM files
+│   ├── migrations/           # Database migrations
+│   │   └── .gitkeep
+│   └── schema.prisma         # Prisma schema
+│
+└── src/
+    ├── __tests__/            # Test files
+    │   ├── integration/      # Integration tests
+    │   │   ├── auth.test.ts
+    │   │   ├── product.test.ts
+    │   │   ├── order.test.ts
+    │   │   └── user.test.ts
+    │   ├── unit/            # Unit tests
+    │   │   ├── services/
+    │   │   │   ├── auth.service.test.ts
+    │   │   │   ├── product.service.test.ts
+    │   │   │   └── order.service.test.ts
+    │   │   └── utils/
+    │   │       ├── jwt.test.ts
+    │   │       └── validation.test.ts
+    │   └── setup.ts         # Test setup file
+    │
+    ├── config/              # Configuration files
+    │   ├── index.ts        # Main config exports
+    │   ├── database.ts     # Database configuration
+    │   └── cors.ts         # CORS configuration
+    │
+    ├── controllers/         # Request handlers
+    │   ├── auth.controller.ts
+    │   ├── product.controller.ts
+    │   ├── order.controller.ts
+    │   ├── user.controller.ts
+    │   └── admin.controller.ts
+    │
+    ├── docs/               # API documentation
+    │   ├── swagger.json
+    │   └── swagger.ts
+    │
+    ├── middlewares/        # Express middlewares
+    │   ├── auth.middleware.ts
+    │   ├── error.middleware.ts
+    │   ├── validation.middleware.ts
+    │   ├── upload.middleware.ts
+    │   └── logger.middleware.ts
+    │
+    ├── routes/             # API routes
+    │   ├── index.ts       # Route aggregator
+    │   ├── auth.routes.ts
+    │   ├── product.routes.ts
+    │   ├── order.routes.ts
+    │   ├── user.routes.ts
+    │   └── admin.routes.ts
+    │
+    ├── services/           # Business logic
+    │   ├── auth.service.ts
+    │   ├── product.service.ts
+    │   ├── order.service.ts
+    │   ├── user.service.ts
+    │   ├── email.service.ts
+    │   └── payment.service.ts
+    │
+    ├── validations/        # Request validation schemas
+    │   ├── auth.validation.ts
+    │   ├── product.validation.ts
+    │   ├── order.validation.ts
+    │   └── user.validation.ts
+    │
+    ├── types/             # TypeScript type definitions
+    │   ├── index.ts      # Type exports
+    │   ├── express.d.ts  # Express type extensions
+    │   ├── product.types.ts
+    │   ├── order.types.ts
+    │   └── user.types.ts
+    │
+    ├── utils/             # Utility functions
+    │   ├── prisma.ts     # Prisma client instance
+    │   ├── logger.ts     # Logging utility
+    │   ├── jwt.ts        # JWT handling
+    │   ├── errors.ts     # Custom error classes
+    │   ├── validators.ts # Custom validators
+    │   └── helpers.ts    # Helper functions
+    │
+    ├── app.ts            # Express app setup
+    └── server.ts         # Server entry point
+    
