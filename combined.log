@@ -1,0 +1,122 @@
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-07T23:27:20.900Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-02-07T23:27:20.905Z"}
+{"level":"info","message":"API Documentation available at http://localhost:5000/docs","timestamp":"2025-02-07T23:27:20.905Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-07T23:36:41.807Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-07T23:36:41.851Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-07T23:36:41.852Z"}
+{"level":"info","message":"\n📥 Received SIGINT. Starting graceful shutdown...","timestamp":"2025-02-07T23:36:57.322Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-07T23:37:07.928Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-07T23:37:07.970Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-07T23:37:07.971Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-07T23:42:54.419Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-07T23:42:54.467Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-07T23:42:54.468Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-07T23:43:26.529Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-07T23:43:26.571Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-07T23:43:26.571Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-07T23:43:57.891Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-07T23:43:57.934Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-07T23:43:57.934Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-07T23:44:18.243Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-07T23:44:18.286Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-07T23:44:18.287Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-07T23:46:21.245Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-07T23:46:21.286Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-07T23:46:21.287Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-07T23:49:53.680Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-07T23:49:53.723Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-07T23:49:53.724Z"}
+{"level":"info","message":"\n📥 Received SIGINT. Starting graceful shutdown...","timestamp":"2025-02-07T23:52:00.089Z"}
+{"level":"info","message":"📤 Closing database connection...","timestamp":"2025-02-07T23:52:00.089Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-07T23:52:13.784Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-07T23:52:13.826Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-07T23:52:13.827Z"}
+{"level":"info","message":"\n📥 Received SIGINT. Starting graceful shutdown...","timestamp":"2025-02-07T23:55:58.620Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T00:02:46.649Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T00:02:46.690Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T00:02:46.691Z"}
+{"level":"info","message":"\n📥 Received SIGINT. Starting graceful shutdown...","timestamp":"2025-02-08T00:02:49.798Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T00:22:16.414Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T00:22:16.492Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T00:22:16.493Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T00:30:56.813Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T00:30:56.857Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T00:30:56.858Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T00:32:11.494Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T00:32:11.538Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T00:32:11.538Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T00:32:58.732Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T00:32:58.774Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T00:32:58.774Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T00:36:05.045Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T00:36:05.084Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T00:36:05.084Z"}
+{"level":"info","message":"Registration attempt for email: user@example.com","timestamp":"2025-02-08T00:37:20.303Z"}
+{"level":"error","message":"Registration error: Password must contain at least one uppercase letter","timestamp":"2025-02-08T00:37:20.304Z"}
+{"level":"error","message":"API Error: Password must contain at least one uppercase letter","timestamp":"2025-02-08T00:37:20.305Z"}
+{"level":"info","message":"Registration attempt for email: user@example.com","timestamp":"2025-02-08T00:37:35.682Z"}
+{"level":"error","message":"Registration error: Password must contain at least one special character (!@#$%^&*)","timestamp":"2025-02-08T00:37:35.683Z"}
+{"level":"error","message":"API Error: Password must contain at least one special character (!@#$%^&*)","timestamp":"2025-02-08T00:37:35.684Z"}
+{"level":"info","message":"Registration attempt for email: user@example.com","timestamp":"2025-02-08T00:37:47.494Z"}
+{"level":"info","message":"New user registered: user@example.com","timestamp":"2025-02-08T00:37:47.634Z"}
+{"level":"info","message":"User registered successfully: user@example.com","timestamp":"2025-02-08T00:37:47.636Z"}
+{"level":"info","message":"Registration attempt for email: user@example.com","timestamp":"2025-02-08T00:38:02.850Z"}
+{"level":"warn","message":"Registration failed - Email already exists: user@example.com","timestamp":"2025-02-08T00:38:02.952Z"}
+{"level":"error","message":"Internal Error: Expected double-quoted property name in JSON at position 64","timestamp":"2025-02-08T00:39:10.012Z"}
+{"level":"error","message":"Internal Error: Expected double-quoted property name in JSON at position 63","timestamp":"2025-02-08T00:39:28.140Z"}
+{"level":"info","message":"\n📥 Received SIGINT. Starting graceful shutdown...","timestamp":"2025-02-08T00:40:17.534Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T00:40:27.668Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T00:40:27.708Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T00:40:27.708Z"}
+{"level":"error","message":"Internal Error: Expected double-quoted property name in JSON at position 63","timestamp":"2025-02-08T00:40:35.845Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T00:45:34.727Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T00:45:34.772Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T00:45:34.772Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T00:47:35.785Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T00:47:35.830Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T00:47:35.830Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T00:48:37.636Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T00:48:37.677Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T00:48:37.678Z"}
+{"level":"info","message":"\n📥 Received SIGINT. Starting graceful shutdown...","timestamp":"2025-02-08T00:48:49.150Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T00:48:58.297Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T00:48:58.335Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T00:48:58.336Z"}
+{"body":{"data":[123,10,32,32,34,101,109,97,105,108,34,58,32,34,117,115,101,114,64,101,120,97,109,112,108,101,46,99,111,109,34,44,10,32,32,34,112,97,115,115,119,111,114,100,34,58,32,34,80,97,115,115,119,111,114,100,64,49,50,51,34,44,10,125],"type":"Buffer"},"expose":true,"level":"error","message":"Error processing POST /api/auth/login: Expected double-quoted property name in JSON at position 63","stack":"SyntaxError: Expected double-quoted property name in JSON at position 63\n    at JSON.parse (<anonymous>)\n    at verify (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\src\\app.ts:31:14)\n    at D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\body-parser\\lib\\read.js:111:9\n    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)\n    at invokeCallback (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\raw-body\\index.js:238:16)\n    at done (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\raw-body\\index.js:227:7)\n    at IncomingMessage.onEnd (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\raw-body\\index.js:287:7)\n    at IncomingMessage.emit (node:events:518:28)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at processTicksAndRejections (node:internal/process/task_queues:82:21)","status":403,"statusCode":403,"timestamp":"2025-02-08T00:49:10.124Z","type":"entity.verify.failed"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T00:51:23.126Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T00:51:23.179Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T00:51:23.179Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T00:52:15.368Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T00:52:15.409Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T00:52:15.409Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T00:52:42.384Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T00:52:42.431Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T00:52:42.431Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T00:52:55.549Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T00:52:55.592Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T00:52:55.592Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T00:58:58.418Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T00:58:58.463Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T00:58:58.464Z"}
+{"body":"{\n  \"email\": \"user@example.com\",\n  \"password\": \"Password@123\",\n}","expose":true,"level":"error","message":"Error processing POST /api/auth/login: Expected double-quoted property name in JSON at position 63","stack":"SyntaxError: Expected double-quoted property name in JSON at position 63\n    at JSON.parse (<anonymous>)\n    at parse (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\body-parser\\lib\\types\\json.js:92:19)\n    at D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)\n    at invokeCallback (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\raw-body\\index.js:238:16)\n    at done (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\raw-body\\index.js:227:7)\n    at IncomingMessage.onEnd (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\raw-body\\index.js:287:7)\n    at IncomingMessage.emit (node:events:518:28)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at processTicksAndRejections (node:internal/process/task_queues:82:21)","status":400,"statusCode":400,"timestamp":"2025-02-08T00:59:08.601Z","type":"entity.parse.failed"}
+{"level":"info","message":"Login attempt for email: user@example.com","timestamp":"2025-02-08T01:00:38.381Z"}
+{"level":"info","message":"User logged in: user@example.com","timestamp":"2025-02-08T01:00:38.532Z"}
+{"level":"info","message":"User logged in successfully: user@example.com","timestamp":"2025-02-08T01:00:38.534Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T01:06:38.475Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T01:06:38.522Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T01:06:38.523Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T01:08:51.029Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T01:08:51.071Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T01:08:51.071Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T01:10:43.682Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T01:10:43.727Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T01:10:43.728Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T01:14:20.655Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T01:14:20.703Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T01:14:20.704Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T01:15:25.926Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T01:15:26.081Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T01:15:26.081Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T01:17:37.154Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T01:17:37.195Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T01:17:37.195Z"}
