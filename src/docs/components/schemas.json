@@ -1,0 +1,153 @@
+{
+  "RegisterRequest": {
+    "type": "object",
+    "required": ["email", "password", "name"],
+    "properties": {
+      "email": {
+        "type": "string",
+        "format": "email",
+        "description": "User email address",
+        "example": "user@example.com"
+      },
+      "password": {
+        "type": "string",
+        "format": "password",
+        "minLength": 8,
+        "description": "User password must contain at least 8 characters, one uppercase, one number, and one special character",
+        "example": "Password@123"
+      },
+      "name": {
+        "type": "string",
+        "minLength": 2,
+        "description": "User full name",
+        "example": "John Doe"
+      }
+    }
+  },
+  "LoginRequest": {
+    "type": "object",
+    "required": ["email", "password"],
+    "properties": {
+      "email": {
+        "type": "string",
+        "format": "email",
+        "description": "User email address",
+        "example": "user@example.com"
+      },
+      "password": {
+        "type": "string",
+        "format": "password",
+        "description": "User password",
+        "example": "Password@123"
+      }
+    }
+  },
+  "ChangePasswordRequest": {
+    "type": "object",
+    "required": ["currentPassword", "newPassword"],
+    "properties": {
+      "currentPassword": {
+        "type": "string",
+        "format": "password",
+        "description": "Current user password",
+        "example": "Password@123"
+      },
+      "newPassword": {
+        "type": "string",
+        "format": "password",
+        "minLength": 8,
+        "description": "New password must contain at least 8 characters, one uppercase, one number, and one special character",
+        "example": "NewPassword@123"
+      }
+    }
+  },
+  "UserResponse": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "User unique identifier",
+        "example": "550e8400-e29b-41d4-a716-446655440000"
+      },
+      "email": {
+        "type": "string",
+        "format": "email",
+        "description": "User email address",
+        "example": "user@example.com"
+      },
+      "name": {
+        "type": "string",
+        "description": "User full name",
+        "example": "John Doe"
+      },
+      "role": {
+        "type": "string",
+        "enum": ["ADMIN", "CUSTOMER"],
+        "description": "User role in the system",
+        "example": "CUSTOMER"
+      }
+    }
+  },
+  "AuthResponse": {
+    "type": "object",
+    "properties": {
+      "token": {
+        "type": "string",
+        "description": "JWT authentication token",
+        "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+      },
+      "user": {
+        "$ref": "#/components/schemas/UserResponse"
+      },
+      "message": {
+        "type": "string",
+        "description": "Success message",
+        "example": "Login successful"
+      }
+    }
+  },
+  "ErrorResponse": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string",
+        "enum": ["error"],
+        "description": "Error status",
+        "example": "error"
+      },
+      "message": {
+        "type": "string",
+        "description": "Error message",
+        "example": "Invalid credentials"
+      },
+      "errors": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "List of specific errors",
+        "example": [
+          "Password must be at least 8 characters",
+          "Password must contain at least one uppercase letter"
+        ]
+      }
+    }
+  },
+  "SuccessResponse": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string",
+        "enum": ["success"],
+        "description": "Success status",
+        "example": "success"
+      },
+      "message": {
+        "type": "string",
+        "description": "Success message",
+        "example": "Password changed successfully"
+      }
+    }
+  }
+}
