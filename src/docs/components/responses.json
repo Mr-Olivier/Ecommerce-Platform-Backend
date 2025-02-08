@@ -1,0 +1,49 @@
+{
+  "AuthSuccess": {
+    "description": "Authentication successful",
+    "content": {
+      "application/json": {
+        "schema": {
+          "$ref": "#/components/schemas/AuthResponse"
+        }
+      }
+    }
+  },
+  "ValidationError": {
+    "description": "Validation failed",
+    "content": {
+      "application/json": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            },
+            "errors": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "UnauthorizedError": {
+    "description": "Authentication failed",
+    "content": {
+      "application/json": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string",
+              "example": "Invalid credentials"
+            }
+          }
+        }
+      }
+    }
+  }
+}
