@@ -1,0 +1,12 @@
+{
+  "authHeader": {
+    "in": "header",
+    "name": "Authorization",
+    "schema": {
+      "type": "string",
+      "format": "Bearer {token}"
+    },
+    "required": true,
+    "description": "JWT token for authentication"
+  }
+}
