@@ -2,6 +2,13 @@
 import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
 import { Express } from "express";
+import path from "path";
+
+// Import components and paths
+const schemas = require("./components/schemas.json");
+const responses = require("./components/responses.json");
+const security = require("./components/security.json");
+const authPaths = require("./paths/auth.json");
 
 const swaggerOptions: swaggerJsdoc.Options = {
   definition: {
@@ -17,40 +24,43 @@ const swaggerOptions: swaggerJsdoc.Options = {
         description: "Development server",
       },
     ],
+    tags: [
+      {
+        name: "Authentication",
+        description: "Authentication endpoints",
+      },
+    ],
     components: {
-      schemas: require("./components/schemas.json"),
-      responses: require("./components/responses.json"),
-      parameters: require("./components/parameters.json"),
-      securitySchemes: require("./components/security.json"),
+      schemas,
+      responses,
+      securitySchemes: security,
     },
-    paths: require("./paths/auth.json"),
+    paths: {
+      ...authPaths, // Include auth paths explicitly
+    },
   },
-  apis: [],
+  apis: [], // We're not using file scanning since we're importing directly
 };
 
-const swaggerSpec = swaggerJsdoc(swaggerOptions);
-
 export const setupSwagger = (app: Express): void => {
-  // Swagger UI options
+  const swaggerSpec = swaggerJsdoc(swaggerOptions);
+
   const options: swaggerUi.SwaggerUiOptions = {
     swaggerOptions: {
       persistAuthorization: true,
       tryItOutEnabled: true,
+      docExpansion: "list",
+      filter: true,
     },
     customCss: ".swagger-ui .topbar { display: none }",
     customSiteTitle: "E-commerce API Documentation",
   };
 
   // Log available paths for debugging
-  const paths = (swaggerSpec as any).paths;
-  if (paths) {
-    console.log("Available API paths:", Object.keys(paths));
-  }
+  console.log("Available API paths:", Object.keys(swaggerSpec.paths || {}));
 
-  // Serve Swagger UI
   app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec, options));
 
-  // Serve Swagger spec as JSON
   app.get("/docs.json", (req, res) => {
     res.setHeader("Content-Type", "application/json");
     res.send(swaggerSpec);
