@@ -120,3 +120,136 @@
 {"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-08T01:17:37.154Z"}
 {"level":"info","message":"Connected to database successfully","timestamp":"2025-02-08T01:17:37.195Z"}
 {"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-08T01:17:37.195Z"}
+{"level":"info","message":"\n📥 Received SIGINT. Starting graceful shutdown...","timestamp":"2025-02-09T19:53:55.995Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T19:54:22.641Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T19:54:22.845Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T19:54:22.846Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T20:51:01.178Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T20:51:01.253Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T20:51:01.254Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T20:52:18.684Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T20:52:18.752Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T20:52:18.752Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T20:53:27.658Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T20:53:27.714Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T20:53:27.715Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T20:53:53.175Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T20:53:53.245Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T20:53:53.246Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T20:55:22.497Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T20:55:22.553Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T20:55:22.554Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T20:57:30.207Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T20:57:30.274Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T20:57:30.274Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T20:59:15.572Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T20:59:15.636Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T20:59:15.636Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T21:03:49.173Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T21:03:49.239Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T21:03:49.239Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T21:04:40.551Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T21:04:40.607Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T21:04:40.607Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T21:05:01.120Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T21:05:01.177Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T21:05:01.178Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T21:05:08.930Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T21:05:08.983Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T21:05:08.984Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T21:05:28.385Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T21:05:28.437Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T21:05:28.438Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T21:05:48.783Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T21:05:48.838Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T21:05:48.839Z"}
+{"level":"info","message":"\n📥 Received SIGINT. Starting graceful shutdown...","timestamp":"2025-02-09T21:06:30.688Z"}
+{"level":"info","message":"📤 Closing database connection...","timestamp":"2025-02-09T21:06:30.689Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T21:06:46.374Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T21:06:46.432Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T21:06:46.432Z"}
+{"level":"error","message":"Error processing POST /api/auth/change-password: Invalid token","stack":"Error: Invalid token\n    at authenticate (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\src\\middlewares\\auth.middleware.ts:37:10)\n    at Layer.handle [as handle_request] (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at Function.handle (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\index.js:47:12)","statusCode":401,"timestamp":"2025-02-09T21:07:16.303Z"}
+{"level":"info","message":"Registration attempt for email: user@example.com","timestamp":"2025-02-09T21:07:54.003Z"}
+{"level":"warn","message":"Registration failed - Email already exists: user@example.com","timestamp":"2025-02-09T21:07:54.363Z"}
+{"level":"info","message":"Registration attempt for email: user1@example.com","timestamp":"2025-02-09T21:08:06.311Z"}
+{"level":"info","message":"New user registered: user1@example.com","timestamp":"2025-02-09T21:08:06.483Z"}
+{"level":"info","message":"User registered successfully: user1@example.com","timestamp":"2025-02-09T21:08:06.484Z"}
+{"level":"info","message":"Login attempt for email: user1@example.com","timestamp":"2025-02-09T21:08:37.048Z"}
+{"level":"info","message":"User logged in: user1@example.com","timestamp":"2025-02-09T21:08:37.224Z"}
+{"level":"info","message":"User logged in successfully: user1@example.com","timestamp":"2025-02-09T21:08:37.226Z"}
+{"level":"info","message":"Password changed successfully for user: user1@example.com","timestamp":"2025-02-09T21:09:05.793Z"}
+{"level":"info","message":"Password changed successfully for user ID: 7682e65d-c686-4abd-8aa4-e5865b41a03c","timestamp":"2025-02-09T21:09:05.794Z"}
+{"level":"info","message":"Login attempt for email: user1@example.com","timestamp":"2025-02-09T21:10:05.914Z"}
+{"level":"warn","message":"Failed login attempt for email: user1@example.com","timestamp":"2025-02-09T21:10:06.085Z"}
+{"level":"info","message":"Login attempt for email: user1@example.com","timestamp":"2025-02-09T21:10:21.245Z"}
+{"level":"info","message":"User logged in: user1@example.com","timestamp":"2025-02-09T21:10:21.377Z"}
+{"level":"info","message":"User logged in successfully: user1@example.com","timestamp":"2025-02-09T21:10:21.379Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T21:13:00.557Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T21:13:00.622Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T21:13:00.623Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T21:14:18.940Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T21:14:18.983Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T21:14:18.984Z"}
+{"level":"error","message":"Error processing POST /api/auth/change-password: Invalid token","stack":"Error: Invalid token\n    at authenticate (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\src\\middlewares\\auth.middleware.ts:37:10)\n    at Layer.handle [as handle_request] (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at Function.handle (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\index.js:47:12)","statusCode":401,"timestamp":"2025-02-09T21:15:07.080Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T21:27:33.984Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T21:27:34.040Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T21:27:34.041Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T21:29:26.755Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T21:29:26.805Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T21:29:26.806Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T21:35:00.058Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T21:35:00.138Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T21:35:00.139Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T21:39:20.479Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T21:39:20.519Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T21:39:20.520Z"}
+{"level":"info","message":"\n📥 Received SIGINT. Starting graceful shutdown...","timestamp":"2025-02-09T21:47:59.926Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T21:48:54.163Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T21:48:54.205Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T21:48:54.205Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T21:53:13.490Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T21:53:13.530Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T21:53:13.531Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T22:00:33.880Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T22:00:33.931Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T22:00:33.931Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T22:02:08.122Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T22:02:08.160Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T22:02:08.161Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T22:03:10.519Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T22:03:10.559Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T22:03:10.560Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T22:11:35.928Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T22:11:35.972Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T22:11:35.973Z"}
+{"level":"info","message":"Registration attempt for email: john.doe@example.com","timestamp":"2025-02-09T22:12:11.168Z"}
+{"level":"error","message":"Registration error: \nInvalid `this.prisma.user.findUnique()` invocation in\nD:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\src\\services\\auth.service.ts:39:49\n\n  36 this.validatePassword(data.password);\n  37 \n  38 // Check if email exists\n→ 39 const existingUser = await this.prisma.user.findUnique(\nThe column `users.firstName` does not exist in the current database.","timestamp":"2025-02-09T22:12:11.266Z"}
+{"clientVersion":"6.3.1","code":"P2022","level":"error","message":"Error processing POST /api/auth/register: \nInvalid `this.prisma.user.findUnique()` invocation in\nD:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\src\\services\\auth.service.ts:39:49\n\n  36 this.validatePassword(data.password);\n  37 \n  38 // Check if email exists\n→ 39 const existingUser = await this.prisma.user.findUnique(\nThe column `users.firstName` does not exist in the current database.","meta":{"column":"users.firstName","modelName":"User"},"name":"PrismaClientKnownRequestError","stack":"PrismaClientKnownRequestError: \nInvalid `this.prisma.user.findUnique()` invocation in\nD:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\src\\services\\auth.service.ts:39:49\n\n  36 this.validatePassword(data.password);\n  37 \n  38 // Check if email exists\n→ 39 const existingUser = await this.prisma.user.findUnique(\nThe column `users.firstName` does not exist in the current database.\n    at Bn.handleRequestError (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:7362)\n    at Bn.handleAndLogRequestError (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6686)\n    at Bn.request (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6393)\n    at l (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9645)\n    at AuthService.register (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\src\\services\\auth.service.ts:39:26)\n    at AuthController.register (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\src\\controllers\\auth.controller.ts:16:22)\n    at D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\src\\routes\\auth.routes.ts:22:7","timestamp":"2025-02-09T22:12:11.268Z"}
+{"level":"info","message":"\n📥 Received SIGINT. Starting graceful shutdown...","timestamp":"2025-02-09T22:12:30.812Z"}
+{"level":"info","message":"📤 Closing database connection...","timestamp":"2025-02-09T22:12:30.813Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T22:12:43.693Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T22:12:43.738Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T22:12:43.738Z"}
+{"level":"info","message":"Registration attempt for email: john.doe@example.com","timestamp":"2025-02-09T22:12:52.025Z"}
+{"level":"error","message":"Registration error: \nInvalid `this.prisma.user.findUnique()` invocation in\nD:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\src\\services\\auth.service.ts:39:49\n\n  36 this.validatePassword(data.password);\n  37 \n  38 // Check if email exists\n→ 39 const existingUser = await this.prisma.user.findUnique(\nThe column `users.firstName` does not exist in the current database.","timestamp":"2025-02-09T22:12:52.103Z"}
+{"clientVersion":"6.3.1","code":"P2022","level":"error","message":"Error processing POST /api/auth/register: \nInvalid `this.prisma.user.findUnique()` invocation in\nD:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\src\\services\\auth.service.ts:39:49\n\n  36 this.validatePassword(data.password);\n  37 \n  38 // Check if email exists\n→ 39 const existingUser = await this.prisma.user.findUnique(\nThe column `users.firstName` does not exist in the current database.","meta":{"column":"users.firstName","modelName":"User"},"name":"PrismaClientKnownRequestError","stack":"PrismaClientKnownRequestError: \nInvalid `this.prisma.user.findUnique()` invocation in\nD:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\src\\services\\auth.service.ts:39:49\n\n  36 this.validatePassword(data.password);\n  37 \n  38 // Check if email exists\n→ 39 const existingUser = await this.prisma.user.findUnique(\nThe column `users.firstName` does not exist in the current database.\n    at Bn.handleRequestError (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:7362)\n    at Bn.handleAndLogRequestError (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6686)\n    at Bn.request (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6393)\n    at l (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9645)\n    at AuthService.register (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\src\\services\\auth.service.ts:39:26)\n    at AuthController.register (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\src\\controllers\\auth.controller.ts:16:22)\n    at D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\src\\routes\\auth.routes.ts:22:7","timestamp":"2025-02-09T22:12:52.107Z"}
+{"level":"info","message":"\n📥 Received SIGINT. Starting graceful shutdown...","timestamp":"2025-02-09T22:14:27.877Z"}
+{"level":"info","message":"📡 Connecting to database...","timestamp":"2025-02-09T22:15:48.186Z"}
+{"level":"info","message":"Connected to database successfully","timestamp":"2025-02-09T22:15:48.237Z"}
+{"level":"info","message":"✅ Database connected successfully","timestamp":"2025-02-09T22:15:48.238Z"}
+{"level":"info","message":"Registration attempt for email: john.doe@example.com","timestamp":"2025-02-09T22:15:58.735Z"}
+{"level":"info","message":"New CUSTOMER registered: john.doe@example.com","timestamp":"2025-02-09T22:15:58.885Z"}
+{"level":"info","message":"User registered successfully: john.doe@example.com","timestamp":"2025-02-09T22:15:58.886Z"}
+{"level":"info","message":"Registration attempt for email: john1.doe@example.com","timestamp":"2025-02-09T22:17:50.147Z"}
+{"level":"info","message":"Registration attempt for email: john1.doe@example.com","timestamp":"2025-02-09T22:18:00.047Z"}
+{"level":"info","message":"New ADMIN registered: john1.doe@example.com","timestamp":"2025-02-09T22:18:00.143Z"}
+{"level":"info","message":"User registered successfully: john1.doe@example.com","timestamp":"2025-02-09T22:18:00.144Z"}
+{"level":"info","message":"Login attempt for email: john.doe@example.com","timestamp":"2025-02-09T22:18:42.557Z"}
+{"level":"info","message":"CUSTOMER logged in: john.doe@example.com","timestamp":"2025-02-09T22:18:42.656Z"}
+{"level":"info","message":"User logged in successfully: john.doe@example.com","timestamp":"2025-02-09T22:18:42.656Z"}
+{"level":"info","message":"Login attempt for email: john1.doe@example.com","timestamp":"2025-02-09T22:18:57.141Z"}
+{"level":"info","message":"ADMIN logged in: john1.doe@example.com","timestamp":"2025-02-09T22:18:57.220Z"}
+{"level":"info","message":"User logged in successfully: john1.doe@example.com","timestamp":"2025-02-09T22:18:57.221Z"}
+{"level":"error","message":"Error processing POST /api/auth/change-password: Invalid token","stack":"Error: Invalid token\n    at authenticate (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\src\\middlewares\\auth.middleware.ts:37:10)\n    at Layer.handle [as handle_request] (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at Function.handle (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (D:\\my projects\\JAVASCRIPT_COURSE\\TYPESCRIPT_WITH_BACK\\ecommerce-backend\\node_modules\\express\\lib\\router\\index.js:47:12)","statusCode":401,"timestamp":"2025-02-09T22:19:39.008Z"}
+{"level":"info","message":"Password changed successfully for user: john1.doe@example.com","timestamp":"2025-02-09T22:19:54.075Z"}
+{"level":"info","message":"Password changed successfully for user ID: e4e93cb4-76b8-4e6b-aa9a-f8a9313d26b5","timestamp":"2025-02-09T22:19:54.076Z"}
