@@ -15,6 +15,7 @@
 
 
 // prisma/schema.prisma
+// prisma/schema.prisma
 generator client {
   provider = "prisma-client-js"
 }
@@ -24,81 +25,86 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum UserRole {
+  ADMIN
+  CUSTOMER
+}
+
 model User {
   id            String    @id @default(uuid())
   email         String    @unique
+  firstName     String
+  lastName      String
+  phoneNumber   String    @unique
   password      String
-  name          String
-  role          String    @default("CUSTOMER")
+  role          UserRole  @default(CUSTOMER)
   loginAttempts Int       @default(0)
   lastLogin     DateTime  @default(now())
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
-  orders        Order[]   // Relation to Order model
-  reviews       Review[]  // Relation to Review model
 
   @@map("users")
 }
 
-model Product {
-  id          String      @id @default(uuid())
-  name        String
-  description String
-  price       Decimal
-  stock       Int
-  category    String
-  images      String[]
-  createdAt   DateTime    @default(now())
-  updatedAt   DateTime    @updatedAt
-  reviews     Review[]    // Relation to Review model
-  orderItems  OrderItem[] // Relation to OrderItem model
+// model Product {
+//   id          String      @id @default(uuid())
+//   name        String
+//   description String
+//   price       Decimal
+//   stock       Int
+//   category    String
+//   images      String[]
+//   createdAt   DateTime    @default(now())
+//   updatedAt   DateTime    @updatedAt
+//   reviews     Review[]    // Relation to Review model
+//   orderItems  OrderItem[] // Relation to OrderItem model
 
-  @@map("products")
-}
+//   @@map("products")
+// }
 
-model Order {
-  id         String      @id @default(uuid())
-  userId     String
-  user       User        @relation(fields: [userId], references: [id])
-  status     OrderStatus @default(PENDING)
-  total      Decimal
-  items      OrderItem[]
-  createdAt  DateTime    @default(now())
-  updatedAt  DateTime    @updatedAt
+// model Order {
+//   id         String      @id @default(uuid())
+//   userId     String
+//   user       User        @relation(fields: [userId], references: [id])
+//   status     OrderStatus @default(PENDING)
+//   total      Decimal
+//   items      OrderItem[]
+//   createdAt  DateTime    @default(now())
+//   updatedAt  DateTime    @updatedAt
 
-  @@map("orders")
-}
+//   @@map("orders")
+// }
 
-model OrderItem {
-  id        String  @id @default(uuid())
-  orderId   String
-  order     Order   @relation(fields: [orderId], references: [id])
-  productId String
-  product   Product @relation(fields: [productId], references: [id])
-  quantity  Int
-  price     Decimal
+// model OrderItem {
+//   id        String  @id @default(uuid())
+//   orderId   String
+//   order     Order   @relation(fields: [orderId], references: [id])
+//   productId String
+//   product   Product @relation(fields: [productId], references: [id])
+//   quantity  Int
+//   price     Decimal
 
-  @@map("order_items")
-}
+//   @@map("order_items")
+// }
 
-model Review {
-  id        String   @id @default(uuid())
-  rating    Int
-  comment   String
-  userId    String
-  user      User     @relation(fields: [userId], references: [id])
-  productId String
-  product   Product  @relation(fields: [productId], references: [id])
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+// model Review {
+//   id        String   @id @default(uuid())
+//   rating    Int
+//   comment   String
+//   userId    String
+//   user      User     @relation(fields: [userId], references: [id])
+//   productId String
+//   product   Product  @relation(fields: [productId], references: [id])
+//   createdAt DateTime @default(now())
+//   updatedAt DateTime @updatedAt
 
-  @@map("reviews")
-}
+//   @@map("reviews")
+// }
 
-enum OrderStatus {
-  PENDING
-  PROCESSING
-  SHIPPED
-  DELIVERED
-  CANCELLED
-}
+// enum OrderStatus {
+//   PENDING
+//   PROCESSING
+//   SHIPPED
+//   DELIVERED
+//   CANCELLED
+// }
