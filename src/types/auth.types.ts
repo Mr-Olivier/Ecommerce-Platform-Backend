@@ -1,8 +1,14 @@
 // src/types/auth.types.ts
+export type UserRole = "ADMIN" | "CUSTOMER";
+
 export interface RegisterDTO {
+  firstName: string;
+  lastName: string;
   email: string;
+  phoneNumber: string;
   password: string;
-  name: string;
+  confirmPassword: string;
+  role: UserRole;
 }
 
 export interface LoginDTO {
@@ -10,17 +16,19 @@ export interface LoginDTO {
   password: string;
 }
 
+export interface ChangePasswordDTO {
+  currentPassword: string;
+  newPassword: string;
+}
+
 export interface AuthResponse {
   token: string;
   user: {
     id: string;
     email: string;
-    name: string;
-    role: string;
+    firstName: string;
+    lastName: string;
+    phoneNumber: string;
+    role: UserRole;
   };
-}
-
-export interface ChangePasswordDTO {
-  currentPassword: string;
-  newPassword: string;
 }
