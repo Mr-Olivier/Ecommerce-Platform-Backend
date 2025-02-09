@@ -5,6 +5,18 @@
       "application/json": {
         "schema": {
           "$ref": "#/components/schemas/AuthResponse"
+        },
+        "example": {
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+          "user": {
+            "id": "123e4567-e89b-12d3-a456-426614174000",
+            "email": "john.doe@example.com",
+            "firstName": "John",
+            "lastName": "Doe",
+            "phoneNumber": "+1234567890",
+            "role": "CUSTOMER"
+          },
+          "message": "Login successful! Welcome back."
         }
       }
     }
@@ -16,6 +28,10 @@
         "schema": {
           "type": "object",
           "properties": {
+            "status": {
+              "type": "string",
+              "enum": ["error"]
+            },
             "message": {
               "type": "string"
             },
@@ -26,6 +42,15 @@
               }
             }
           }
+        },
+        "example": {
+          "status": "error",
+          "message": "Validation failed",
+          "errors": [
+            "Password must be at least 8 characters",
+            "Password must contain at least one uppercase letter",
+            "Password must contain at least one special character"
+          ]
         }
       }
     }
@@ -37,11 +62,18 @@
         "schema": {
           "type": "object",
           "properties": {
-            "message": {
+            "status": {
               "type": "string",
-              "example": "Invalid credentials"
+              "enum": ["error"]
+            },
+            "message": {
+              "type": "string"
             }
           }
+        },
+        "example": {
+          "status": "error",
+          "message": "Invalid credentials"
         }
       }
     }
