@@ -14,8 +14,6 @@
 // }
 
 
-// prisma/schema.prisma
-// prisma/schema.prisma
 generator client {
   provider = "prisma-client-js"
 }
@@ -30,21 +28,103 @@ enum UserRole {
   CUSTOMER
 }
 
+enum TokenType {
+  EMAIL_VERIFICATION
+  PASSWORD_RESET
+  OTP
+}
+
 model User {
-  id            String    @id @default(uuid())
-  email         String    @unique
-  firstName     String
-  lastName      String
-  phoneNumber   String    @unique
-  password      String
-  role          UserRole  @default(CUSTOMER)
-  loginAttempts Int       @default(0)
-  lastLogin     DateTime  @default(now())
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
+  id              String         @id @default(uuid())
+  email           String         @unique
+  firstName       String
+  lastName        String
+  phoneNumber     String         @unique
+  password        String
+  role            UserRole       @default(CUSTOMER)
+  isEmailVerified Boolean        @default(false)
+  isMfaEnabled    Boolean        @default(false)
+  isActive        Boolean        @default(true)    // Added this field
+  loginAttempts   Int           @default(0)
+  lastLogin       DateTime       @default(now())
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  tokens          Token[]
+  sessions        Session[]
+  activities      UserActivity[]
 
   @@map("users")
 }
+
+model Token {
+  id        String    @id @default(uuid())
+  token     String    @unique
+  type      TokenType
+  expiresAt DateTime
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime  @default(now())
+
+  @@map("tokens")
+  @@index([userId])
+}
+
+model Session {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  device    String
+  location  String?
+  ip        String
+  isActive  Boolean  @default(true)
+  lastUsed  DateTime @default(now())
+  createdAt DateTime @default(now())
+
+  @@map("sessions")
+  @@index([userId])
+}
+
+model UserActivity {
+  id        String   @id @default(uuid())
+  userId    String
+  type      String
+  details   String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_activities")
+  @@index([userId])
+  @@index([createdAt])
+}
+// generator client {
+//   provider = "prisma-client-js"
+// }
+
+// datasource db {
+//   provider = "postgresql"
+//   url      = env("DATABASE_URL")
+// }
+
+// enum UserRole {
+//   ADMIN
+//   CUSTOMER
+// }
+
+// model User {
+//   id            String    @id @default(uuid())
+//   email         String    @unique
+//   firstName     String
+//   lastName      String
+//   phoneNumber   String    @unique
+//   password      String
+//   role          UserRole  @default(CUSTOMER)
+//   loginAttempts Int       @default(0)
+//   lastLogin     DateTime  @default(now())
+//   createdAt     DateTime  @default(now())
+//   updatedAt     DateTime  @updatedAt
+
+//   @@map("users")
+// }
 
 // model Product {
 //   id          String      @id @default(uuid())
