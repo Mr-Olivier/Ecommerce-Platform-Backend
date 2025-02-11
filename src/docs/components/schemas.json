@@ -40,19 +40,19 @@
         "type": "string",
         "format": "password",
         "minLength": 8,
-        "description": "Password must contain at least 8 characters, including uppercase, number, and special character",
+        "description": "Must contain uppercase, number, and special character",
         "example": "Password@123"
       },
       "confirmPassword": {
         "type": "string",
         "format": "password",
-        "description": "Must match the password field",
+        "description": "Must match password",
         "example": "Password@123"
       },
       "role": {
         "type": "string",
         "enum": ["ADMIN", "CUSTOMER"],
-        "description": "User's role in the system",
+        "description": "User role",
         "example": "CUSTOMER"
       }
     }
@@ -75,9 +75,46 @@
       }
     }
   },
+  "MfaVerificationRequest": {
+    "type": "object",
+    "required": ["otp"],
+    "properties": {
+      "otp": {
+        "type": "string",
+        "minLength": 6,
+        "maxLength": 6,
+        "description": "One-time password sent via email",
+        "example": "123456"
+      }
+    }
+  },
+  "UpdateProfileRequest": {
+    "type": "object",
+    "properties": {
+      "firstName": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 50,
+        "description": "New first name",
+        "example": "John"
+      },
+      "lastName": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 50,
+        "description": "New last name",
+        "example": "Doe"
+      },
+      "phoneNumber": {
+        "type": "string",
+        "description": "New phone number",
+        "example": "+1234567890"
+      }
+    }
+  },
   "ChangePasswordRequest": {
     "type": "object",
-    "required": ["currentPassword", "newPassword"],
+    "required": ["currentPassword", "newPassword", "confirmPassword"],
     "properties": {
       "currentPassword": {
         "type": "string",
@@ -88,57 +125,182 @@
       "newPassword": {
         "type": "string",
         "format": "password",
-        "minLength": 8,
-        "description": "New password (must be different from current)",
+        "description": "New password",
+        "example": "NewPassword@123"
+      },
+      "confirmPassword": {
+        "type": "string",
+        "format": "password",
+        "description": "Confirm new password",
         "example": "NewPassword@123"
       }
     }
   },
-  "UserResponse": {
+  "ForgotPasswordRequest": {
+    "type": "object",
+    "required": ["email"],
+    "properties": {
+      "email": {
+        "type": "string",
+        "format": "email",
+        "description": "Registered email address",
+        "example": "john.doe@example.com"
+      }
+    }
+  },
+  "ResetPasswordRequest": {
+    "type": "object",
+    "required": ["token", "newPassword", "confirmPassword"],
+    "properties": {
+      "token": {
+        "type": "string",
+        "description": "Password reset token from email",
+        "example": "abc123def456..."
+      },
+      "newPassword": {
+        "type": "string",
+        "format": "password",
+        "description": "New password",
+        "example": "NewPassword@123"
+      },
+      "confirmPassword": {
+        "type": "string",
+        "format": "password",
+        "description": "Confirm new password",
+        "example": "NewPassword@123"
+      }
+    }
+  },
+  "UserProfile": {
     "type": "object",
     "properties": {
       "id": {
         "type": "string",
         "format": "uuid",
-        "description": "User's unique identifier"
+        "description": "User unique identifier"
       },
       "email": {
         "type": "string",
         "format": "email",
-        "description": "User's email address"
+        "description": "User email address"
       },
       "firstName": {
         "type": "string",
-        "description": "User's first name"
+        "description": "User first name"
       },
       "lastName": {
         "type": "string",
-        "description": "User's last name"
+        "description": "User last name"
       },
       "phoneNumber": {
         "type": "string",
-        "description": "User's phone number"
+        "description": "User phone number"
       },
       "role": {
         "type": "string",
         "enum": ["ADMIN", "CUSTOMER"],
-        "description": "User's role"
+        "description": "User role"
+      },
+      "isEmailVerified": {
+        "type": "boolean",
+        "description": "Email verification status"
+      },
+      "isMfaEnabled": {
+        "type": "boolean",
+        "description": "MFA status"
+      },
+      "lastLogin": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Last login timestamp"
       }
     }
   },
-  "AuthResponse": {
+  "SessionInfo": {
     "type": "object",
     "properties": {
-      "token": {
+      "id": {
         "type": "string",
-        "description": "JWT authentication token"
+        "format": "uuid",
+        "description": "Session unique identifier"
       },
-      "user": {
-        "$ref": "#/components/schemas/UserResponse"
-      },
-      "message": {
+      "device": {
         "type": "string",
-        "description": "Response message"
+        "description": "Device information"
+      },
+      "location": {
+        "type": "string",
+        "description": "Login location"
+      },
+      "ip": {
+        "type": "string",
+        "description": "IP address"
+      },
+      "lastUsed": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Last activity timestamp"
+      },
+      "isActive": {
+        "type": "boolean",
+        "description": "Session active status"
+      }
+    }
+  },
+  "ChangeRoleRequest": {
+    "type": "object",
+    "required": ["role"],
+    "properties": {
+      "role": {
+        "type": "string",
+        "enum": ["ADMIN", "CUSTOMER"],
+        "description": "New role for the user",
+        "example": "ADMIN"
+      }
+    }
+  },
+  "AdminActionRequest": {
+    "type": "object",
+    "required": ["reason"],
+    "properties": {
+      "reason": {
+        "type": "string",
+        "description": "Reason for the admin action",
+        "example": "Multiple policy violations"
+      }
+    }
+  },
+  "UserActivity": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "type": {
+        "type": "string",
+        "enum": ["LOGIN", "PASSWORD_CHANGE", "ROLE_CHANGE", "PROFILE_UPDATE"],
+        "description": "Type of activity"
+      },
+      "ip": {
+        "type": "string",
+        "description": "IP address"
+      },
+      "device": {
+        "type": "string",
+        "description": "Device information"
+      },
+      "location": {
+        "type": "string",
+        "description": "Location information"
+      },
+      "timestamp": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "details": {
+        "type": "object",
+        "description": "Additional activity details"
       }
     }
   }
