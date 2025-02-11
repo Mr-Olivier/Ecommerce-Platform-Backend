@@ -4,19 +4,79 @@
     "content": {
       "application/json": {
         "schema": {
-          "$ref": "#/components/schemas/AuthResponse"
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "example": "success"
+            },
+            "message": {
+              "type": "string"
+            },
+            "token": {
+              "type": "string",
+              "description": "JWT token"
+            },
+            "user": {
+              "$ref": "#/components/schemas/UserProfile"
+            }
+          }
         },
-        "example": {
-          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-          "user": {
-            "id": "123e4567-e89b-12d3-a456-426614174000",
-            "email": "john.doe@example.com",
-            "firstName": "John",
-            "lastName": "Doe",
-            "phoneNumber": "+1234567890",
-            "role": "CUSTOMER"
+        "examples": {
+          "register": {
+            "value": {
+              "status": "success",
+              "message": "Registration successful! Please check your email to verify your account.",
+              "token": "eyJhbGciOiJIUzI1...",
+              "user": {
+                "id": "123e4567-e89b-12d3-a456-426614174000",
+                "email": "john.doe@example.com",
+                "firstName": "John",
+                "lastName": "Doe",
+                "phoneNumber": "+1234567890",
+                "role": "CUSTOMER",
+                "isEmailVerified": false,
+                "isMfaEnabled": false
+              }
+            }
           },
-          "message": "Login successful! Welcome back."
+          "login": {
+            "value": {
+              "status": "success",
+              "message": "Login successful! Welcome back.",
+              "token": "eyJhbGciOiJIUzI1...",
+              "user": {
+                "id": "123e4567-e89b-12d3-a456-426614174000",
+                "email": "john.doe@example.com",
+                "firstName": "John",
+                "lastName": "Doe",
+                "phoneNumber": "+1234567890",
+                "role": "CUSTOMER",
+                "isEmailVerified": true,
+                "isMfaEnabled": true
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "MfaRequired": {
+    "description": "MFA verification required",
+    "content": {
+      "application/json": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "example": "pending"
+            },
+            "message": {
+              "type": "string",
+              "example": "MFA code sent to your email"
+            }
+          }
         }
       }
     }
@@ -43,14 +103,24 @@
             }
           }
         },
-        "example": {
-          "status": "error",
-          "message": "Validation failed",
-          "errors": [
-            "Password must be at least 8 characters",
-            "Password must contain at least one uppercase letter",
-            "Password must contain at least one special character"
-          ]
+        "examples": {
+          "password": {
+            "value": {
+              "status": "error",
+              "message": "Validation failed",
+              "errors": [
+                "Password must be at least 8 characters",
+                "Password must contain at least one uppercase letter",
+                "Password must contain at least one special character"
+              ]
+            }
+          },
+          "email": {
+            "value": {
+              "status": "error",
+              "message": "Email already exists"
+            }
+          }
         }
       }
     }
@@ -74,6 +144,203 @@
         "example": {
           "status": "error",
           "message": "Invalid credentials"
+        }
+      }
+    }
+  },
+  "SuccessResponse": {
+    "description": "Operation successful",
+    "content": {
+      "application/json": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": ["success"]
+            },
+            "message": {
+              "type": "string"
+            }
+          }
+        },
+        "example": {
+          "status": "success",
+          "message": "Operation completed successfully"
+        }
+      }
+    }
+  },
+  "ProfileResponse": {
+    "description": "User profile data",
+    "content": {
+      "application/json": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": ["success"]
+            },
+            "data": {
+              "$ref": "#/components/schemas/UserProfile"
+            }
+          }
+        }
+      }
+    }
+  },
+  "SessionsResponse": {
+    "description": "User sessions list",
+    "content": {
+      "application/json": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": ["success"]
+            },
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/SessionInfo"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "UsersListResponse": {
+    "description": "List of users with pagination",
+    "content": {
+      "application/json": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": ["success"]
+            },
+            "data": {
+              "type": "object",
+              "properties": {
+                "users": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserProfile"
+                  }
+                },
+                "pagination": {
+                  "type": "object",
+                  "properties": {
+                    "total": {
+                      "type": "integer"
+                    },
+                    "pages": {
+                      "type": "integer"
+                    },
+                    "page": {
+                      "type": "integer"
+                    },
+                    "limit": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "UserDetailResponse": {
+    "description": "Detailed user information",
+    "content": {
+      "application/json": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": ["success"]
+            },
+            "data": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/UserProfile"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "createdAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "updatedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "lastLogin": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "activeSessions": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/SessionInfo"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "UserActivityResponse": {
+    "description": "User activity log",
+    "content": {
+      "application/json": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": ["success"]
+            },
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/UserActivity"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "ForbiddenError": {
+    "description": "Access forbidden",
+    "content": {
+      "application/json": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": ["error"]
+            },
+            "message": {
+              "type": "string",
+              "example": "Admin access required"
+            }
+          }
         }
       }
     }
