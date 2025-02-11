@@ -1,0 +1,319 @@
+{
+  "/api/admin/users": {
+    "get": {
+      "tags": ["Admin"],
+      "summary": "Get all users",
+      "description": "Get list of all users with filters (Admin only)",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "parameters": [
+        {
+          "in": "query",
+          "name": "role",
+          "schema": {
+            "type": "string",
+            "enum": ["ADMIN", "CUSTOMER"]
+          },
+          "description": "Filter by user role"
+        },
+        {
+          "in": "query",
+          "name": "isEmailVerified",
+          "schema": {
+            "type": "boolean"
+          },
+          "description": "Filter by email verification status"
+        },
+        {
+          "in": "query",
+          "name": "isMfaEnabled",
+          "schema": {
+            "type": "boolean"
+          },
+          "description": "Filter by MFA status"
+        },
+        {
+          "in": "query",
+          "name": "search",
+          "schema": {
+            "type": "string"
+          },
+          "description": "Search in name and email"
+        },
+        {
+          "in": "query",
+          "name": "page",
+          "schema": {
+            "type": "integer",
+            "minimum": 1,
+            "default": 1
+          },
+          "description": "Page number"
+        },
+        {
+          "in": "query",
+          "name": "limit",
+          "schema": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100,
+            "default": 10
+          },
+          "description": "Items per page"
+        },
+        {
+          "in": "query",
+          "name": "sortBy",
+          "schema": {
+            "type": "string",
+            "enum": ["createdAt", "lastLogin", "email"]
+          },
+          "description": "Sort field"
+        },
+        {
+          "in": "query",
+          "name": "sortOrder",
+          "schema": {
+            "type": "string",
+            "enum": ["asc", "desc"]
+          },
+          "description": "Sort order"
+        }
+      ],
+      "responses": {
+        "200": {
+          "$ref": "#/components/responses/UsersListResponse"
+        },
+        "401": {
+          "$ref": "#/components/responses/UnauthorizedError"
+        },
+        "403": {
+          "$ref": "#/components/responses/ForbiddenError"
+        }
+      }
+    }
+  },
+  "/api/admin/users/{userId}": {
+    "get": {
+      "tags": ["Admin"],
+      "summary": "Get user details",
+      "description": "Get detailed information about a specific user (Admin only)",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "userId",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "description": "User ID"
+        }
+      ],
+      "responses": {
+        "200": {
+          "$ref": "#/components/responses/UserDetailResponse"
+        },
+        "401": {
+          "$ref": "#/components/responses/UnauthorizedError"
+        },
+        "403": {
+          "$ref": "#/components/responses/ForbiddenError"
+        },
+        "404": {
+          "$ref": "#/components/responses/NotFoundError"
+        }
+      }
+    }
+  },
+  "/api/admin/users/{userId}/change-role": {
+    "put": {
+      "tags": ["Admin"],
+      "summary": "Change user role",
+      "description": "Change a user's role (Admin only)",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "userId",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "description": "User ID"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ChangeRoleRequest"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "$ref": "#/components/responses/SuccessResponse"
+        },
+        "401": {
+          "$ref": "#/components/responses/UnauthorizedError"
+        },
+        "403": {
+          "$ref": "#/components/responses/ForbiddenError"
+        },
+        "404": {
+          "$ref": "#/components/responses/NotFoundError"
+        }
+      }
+    }
+  },
+  "/api/admin/users/{userId}/deactivate": {
+    "put": {
+      "tags": ["Admin"],
+      "summary": "Deactivate user",
+      "description": "Deactivate a user account (Admin only)",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "userId",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "description": "User ID"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/AdminActionRequest"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "$ref": "#/components/responses/SuccessResponse"
+        },
+        "401": {
+          "$ref": "#/components/responses/UnauthorizedError"
+        },
+        "403": {
+          "$ref": "#/components/responses/ForbiddenError"
+        },
+        "404": {
+          "$ref": "#/components/responses/NotFoundError"
+        }
+      }
+    }
+  },
+  "/api/admin/users/{userId}/reactivate": {
+    "put": {
+      "tags": ["Admin"],
+      "summary": "Reactivate user",
+      "description": "Reactivate a deactivated user account (Admin only)",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "userId",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "description": "User ID"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/AdminActionRequest"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "$ref": "#/components/responses/SuccessResponse"
+        },
+        "401": {
+          "$ref": "#/components/responses/UnauthorizedError"
+        },
+        "403": {
+          "$ref": "#/components/responses/ForbiddenError"
+        },
+        "404": {
+          "$ref": "#/components/responses/NotFoundError"
+        }
+      }
+    }
+  },
+  "/api/admin/users/{userId}/activity": {
+    "get": {
+      "tags": ["Admin"],
+      "summary": "Get user activity",
+      "description": "Get user's activity log (Admin only)",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "userId",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "description": "User ID"
+        }
+      ],
+      "responses": {
+        "200": {
+          "$ref": "#/components/responses/UserActivityResponse"
+        },
+        "401": {
+          "$ref": "#/components/responses/UnauthorizedError"
+        },
+        "403": {
+          "$ref": "#/components/responses/ForbiddenError"
+        },
+        "404": {
+          "$ref": "#/components/responses/NotFoundError"
+        }
+      }
+    }
+  }
+}
