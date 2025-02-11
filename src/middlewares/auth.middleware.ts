@@ -29,7 +29,7 @@ export const authenticate = async (
     req.user = {
       id: user.id,
       email: user.email,
-      name: user.name,
+      name: `${user.firstName} ${user.lastName}`,
       role: user.role,
     };
     next();
